@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Frontpage - Start Bootstrap Template</title>
+    <title>Almacen</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="http://localhost:8000/css/bootstrap.min.css" rel="stylesheet">
@@ -83,7 +83,9 @@
                         <input type = "text" placeholder = "Nombre del producto">
                     </label>
                     <label>
-                        <input type = "text" placeholder = "Categoria del producto">
+                        <select name="categorias">
+                            <option value="#"></option>
+                        </select>
                     </label>             
                     <input type = "submit" value = "Enviar">
                 </form>

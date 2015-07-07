@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Frontpage - Start Bootstrap Template</title>
+    <title>Almacen</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="http://localhost:8000/css/bootstrap.min.css" rel="stylesheet">
@@ -83,7 +83,7 @@
                 <label>Usuario</label>
                 <label>Fecha</label>
                 <label>Productos</label>
-                <input type = "number" placeholder = "0" min = "0">
+                <input type = "number" value = "0" min = "0">
                  <input type = "submit" value = "Dar salida">
               </form>  
                                

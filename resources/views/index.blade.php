@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Frontpage - Start Bootstrap Template</title>
+    <title>Almacen</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="http://localhost:8000/css/bootstrap.min.css" rel="stylesheet">
@@ -63,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class ="img-center" src ="http://localhost:8000/images/portadabanner.jpg" alt="">
+                   
                 </div>
             </div>
         </div>
@@ -78,8 +78,7 @@
                 @foreach($categorias as $categoria)
             <div class="col-sm-4">
                 <img class="img-circle img-responsive img-center" src="http://localhost:8000/images/categorias/1.jpg" alt="">
-                <h2>Categoria</h2>
-                <p><center>{{$categoria->Nombre}}</center></p>
+                <h2>{{$categoria->Nombre}}</h2>
             </div>
             @endforeach
     </div>
