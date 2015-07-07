@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-07-2015 a las 21:52:13
+-- Tiempo de generación: 07-07-2015 a las 22:00:21
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `productos` (
   `ID` int(11) NOT NULL,
   `Nombre` varchar(20) NOT NULL,
   `Categoria_ID` int(11) NOT NULL,
-  `Cant.Existente` int(11) NOT NULL
+  `Cant_Existente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
