@@ -63,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="tagline">H1</h1>
+                    <img class ="img-center" src ="http://localhost:8000/images/portadabanner.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -75,11 +75,11 @@
         <hr>
 
         <div class="row">
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
                 @foreach($categorias as $categoria)
+            <div class="col-sm-4">
+                <img class="img-circle img-responsive img-center" src="http://localhost:8000/images/categorias/1.jpg" alt="">
                 <h2>Categoria</h2>
-                <p>{{$categoria->Nombre}}</p>
+                <p><center>{{$categoria->Nombre}}</center></p>
             </div>
             @endforeach
     </div>
