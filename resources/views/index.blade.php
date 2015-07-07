@@ -39,13 +39,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Almacen</a>
+                <a class="navbar-brand" href="http://localhost:8000/">Almacen</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="registrar.blade.php">Registrar producto</a>
+                        <a href="http://localhost:8000/registrar">Registrar producto</a>
                     </li>
                     <li>
                         <a href="#">Consulta</a>
