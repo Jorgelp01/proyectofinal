@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-07-2015 a las 21:30:55
+-- Tiempo de generación: 07-07-2015 a las 21:52:13
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -103,14 +103,14 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`ID`, `Nombre`, `Apellidos`) VALUES
 (1, 'Alejandro', 'Zazueta'),
-(2, 'Juampi', 'Zazueta'),
-(3, 'Ale', 'Zazueta'),
-(4, 'jandro', 'zueta'),
-(5, 'andro', 'Zazua'),
-(6, 'Alo', 'eta'),
-(7, 'julio', 'Zipo'),
-(8, 'felipe', 'ulio'),
-(9, 'clemente', 'gerardo');
+(2, 'Pablo', 'Bracamontes'),
+(3, 'Alain', 'Torrecillas'),
+(4, 'Manuel', 'Verdugo'),
+(5, 'Luis', 'Payan'),
+(6, 'Edi', 'Mata'),
+(7, 'Nachito', 'Ruelas'),
+(8, 'Martha', 'Estela'),
+(9, 'Clemente', 'Gerardo');
 
 --
 -- Índices para tablas volcadas
