@@ -15,7 +15,7 @@
     <link href="http://localhost:8000/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="http://localhost:8000/css/business-frontpage.css" rel="stylesheet">
+     <link href="http://localhost:8000/css/business-frontpage.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -75,22 +75,20 @@
         <hr>
 
         <div class="row">
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Producto #1</h2>
-                <p>These marketing boxes are a great place to put some information. These can contain summaries of what the company does, promotional information, or anything else that is relevant to the company. These will usually be below-the-fold.</p>
+            <div class="col-sm-12">
+                <!--AQUI VA LA LISTA DE PRODUCTOS-->
+                <h4>Lista de productos</h4>
+              <form>
+                <label>Folio</label>
+                <label>Usuario</label>
+                <label>Fecha</label>
+                <label>Productos</label>
+                <input type = "number" placeholder = "0" min = "0">
+                 <input type = "submit" value = "Dar salida">
+              </form>  
+                               
             </div>
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Producto #2</h2>
-                <p>The images are set to be circular and responsive. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            </div>
-            <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Producto #3</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-            </div>
-        </div>
+         </div>
         <!-- /.row -->
 
         <hr>
@@ -99,7 +97,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Proyecto ingeniería web 2015</p>
+                    <p>Copyright &copy;  Proyecto ingeniería web 2015</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -115,7 +113,5 @@
     <script src="http://localhost:8000/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
-
-
-       
