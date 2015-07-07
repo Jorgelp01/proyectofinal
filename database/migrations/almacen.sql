@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-07-2015 a las 01:48:32
+-- Tiempo de generación: 07-07-2015 a las 21:30:55
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -30,6 +30,22 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `ID` int(11) NOT NULL,
   `Nombre` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`ID`, `Nombre`) VALUES
+(1, 'Procesador'),
+(2, 'Tarjetas Madre'),
+(3, 'Discos Duros'),
+(4, 'Monitores'),
+(5, 'Accesorios'),
+(6, 'Gabinetes'),
+(7, 'Memorias'),
+(8, 'Consumibles'),
+(9, 'Tarjetas Graficas'),
+(10, 'Tarjeta de Audio');
 
 -- --------------------------------------------------------
 
