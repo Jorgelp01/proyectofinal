@@ -77,9 +77,11 @@
         <div class="row">
             <div class="col-sm-4">
                 <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
-                <h2>Producto #1</h2>
-                <p>These marketing boxes are a great place to put some information. These can contain summaries of what the company does, promotional information, or anything else that is relevant to the company. These will usually be below-the-fold.</p>
+                @foreach($categorias as $categoria)
+                <h2>Categoria</h2>
+                <p>{{$categoria->Nombre}}</p>
             </div>
+            @endforeach
             <div class="col-sm-4">
                 <img class="img-circle img-responsive img-center" src="http://placehold.it/300x300" alt="">
                 <h2>Producto #2</h2>

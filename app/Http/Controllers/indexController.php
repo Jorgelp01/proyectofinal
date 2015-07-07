@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\categoriasModelo;
+use App\productosModelo;
 
 class indexController extends Controller
 {
@@ -16,22 +18,23 @@ class indexController extends Controller
      */
     public function index()
     {
-        $productos=productosModelo::allproductos();
-        return view ('index', compact ('categoria'));
+        $categorias=categoriasModelo::allcategorias();
+        return view ('index', compact ('categorias'));
     }
 
     public function categoriaProducto($id)
     {
-        $categorias=categoriasModelo::getCategorias($id);
-        $productos=productosModelo::allproductos();
-        return view('productos', compact ('categoria', 'productos');
+        $productos=productosModelo::getProductos($id);
+        $categorias=categoriasModelo::allcategorias();
+        return view('productos', compact ('categorias', 'productos'));
     }
 
-    public function registraProducto()
+    public function registraProducto(Request $request)
     {
         $producto = new Producto();
-        $producto->nombre = Request::input("Nombre");
-        $producto->categoria = Request::input("Categoria_ID")
+        $producto->nombre = $request->input("Nombre");
+        $producto->categoria = $request->input("Categoria_ID");
+        $producto->cantexistente = $request->input("Cant.Existente");
         $producto->save();
     }
 
