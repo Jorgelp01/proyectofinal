@@ -48,7 +48,7 @@
                         <a href="http://localhost:8000/registrar">Registrar producto</a>
                     </li>
                     <li>
-                        <a href="#">Consulta</a>
+                        <a href="http://localhost:8000/salida">Consulta</a>
                     </li>
                 </ul>
             </div>

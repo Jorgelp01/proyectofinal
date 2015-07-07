@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::get('/registrar', function () {
     return view('registrar');
 });
+
+
+Route::get('/salida', function () {
+    return view('salida');
+});
