@@ -31,11 +31,11 @@ class indexController extends Controller
 
     public function registraProducto(Request $request)
     {
-        dd($request);
-        $producto = new Producto();
-        $producto->nombre = $request->input("Nombre");
-        $producto->categoria = $request->input("Categoria_ID");
-        $producto->cantexistente = $request->input("Cant.Existente");
+       
+        $producto = new productosModelo();
+        $producto->nombre = $request->input("nombre");
+        $producto->categoriaID = $request->input("CategoriaID");
+        $producto->cantexistente = $request->input("CantExistente");
         $producto->save();
     }
 

@@ -48,7 +48,7 @@
                         <a href="http://localhost:8000/registrar">Registrar producto</a>
                     </li>
                     <li>
-                        <a href="http://localhost:8000/salida">Consulta</a>
+                        <a href="http://localhost:8000/salida">Salidas</a>
                     </li>
                 </ul>
             </div>
@@ -76,24 +76,25 @@
         <div class="row">
             <div class="col-sm-12">
                 <h4>Registrar producto</h4>
-                <form action ="http://localhost:8000/guardar" method = "post">
+                <form action ="http://localhost:8000/guardar" method = "POST">
                     
                     <label>
                         <input name = "nombre" type = "text" placeholder = "Nombre del producto">
                     </label>
                     <label>
-                        <input name = "cantexistente" type = "text" placeholder = "Cantidad existente">
+                        <input name = "CantExistente" type = "text" placeholder = "Cantidad existente">
                     </label>
                     <label>
-                        <select name="categoria">
+                        <select name="CategoriaID">
                             @foreach($categorias as $categoria)
                                 <option value="{{$categoria->ID}}">{{$categoria->Nombre}}</option>
 
                             @endforeach
                         </select>
                     </label>
-                                  
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />              
                     <input type = "submit" value = "Enviar">
+
                 </form>
                                 
             </div>

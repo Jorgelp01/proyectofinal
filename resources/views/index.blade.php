@@ -48,7 +48,7 @@
                         <a href="http://localhost:8000/registrar">Registrar producto</a>
                     </li>
                     <li>
-                        <a href="http://localhost:8000/salida">Consulta</a>
+                        <a href="http://localhost:8000/salida">Salidas</a>
                     </li>
                 </ul>
             </div>
@@ -74,9 +74,11 @@
         <hr>
 
         <div class="row">
+            
+            
                 @foreach($categorias as $categoria)
             <div class="col-sm-4">
-                <img class="img-circle img-responsive img-center" src="http://localhost:8000/images/categorias/1.jpg" alt="">
+                <img class="img-circle img-responsive img-center" src="http://localhost:8000/images/categorias/{{$categoria->ID}}.jpg" alt="">
                 <h2>{{$categoria->Nombre}}</h2>
             </div>
             @endforeach
