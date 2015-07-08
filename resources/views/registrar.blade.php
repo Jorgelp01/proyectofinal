@@ -84,7 +84,9 @@
                     </label>
                     <label>
                         <select name="categorias">
-                            <option value="#"></option>
+                            @foreach($categorias as $categoria)
+                                <option value="{{$categoria->ID}}">{{$categoria->Nombre}}</option>
+                            @endforeach
                         </select>
                     </label>             
                     <input type = "submit" value = "Enviar">

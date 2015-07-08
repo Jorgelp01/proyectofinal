@@ -38,4 +38,10 @@ class indexController extends Controller
         $producto->save();
     }
 
+    public function categoriaBox()
+    {
+     $categorias=categoriasModelo::allcategorias();
+        return view ('registrar', compact ('categorias'));   
+    }
+
 }
