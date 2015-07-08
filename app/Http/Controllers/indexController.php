@@ -31,6 +31,7 @@ class indexController extends Controller
 
     public function registraProducto(Request $request)
     {
+        dd($request);
         $producto = new Producto();
         $producto->nombre = $request->input("Nombre");
         $producto->categoria = $request->input("Categoria_ID");

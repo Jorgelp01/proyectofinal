@@ -76,18 +76,23 @@
         <div class="row">
             <div class="col-sm-12">
                 <h4>Registrar producto</h4>
-                <form>
+                <form action ="http://localhost:8000/guardar" method = "post">
                     
                     <label>
-                        <input type = "text" placeholder = "Nombre del producto">
+                        <input name = "nombre" type = "text" placeholder = "Nombre del producto">
                     </label>
                     <label>
-                        <select name="categorias">
+                        <input name = "cantexistente" type = "text" placeholder = "Cantidad existente">
+                    </label>
+                    <label>
+                        <select name="categoria">
                             @foreach($categorias as $categoria)
                                 <option value="{{$categoria->ID}}">{{$categoria->Nombre}}</option>
+
                             @endforeach
                         </select>
-                    </label>             
+                    </label>
+                                  
                     <input type = "submit" value = "Enviar">
                 </form>
                                 
