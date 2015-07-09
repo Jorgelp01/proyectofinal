@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-07-2015 a las 22:00:21
+-- Tiempo de generación: 08-07-2015 a las 23:13:49
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de datos: `almacen`
+-- Base de datos: `proyectofinal`
 --
 
 -- --------------------------------------------------------
@@ -36,16 +36,8 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 --
 
 INSERT INTO `categoria` (`ID`, `Nombre`) VALUES
-(1, 'Procesador'),
-(2, 'Tarjetas Madre'),
-(3, 'Discos Duros'),
-(4, 'Monitores'),
-(5, 'Accesorios'),
-(6, 'Gabinetes'),
-(7, 'Memorias'),
-(8, 'Consumibles'),
-(9, 'Tarjetas Graficas'),
-(10, 'Tarjeta de Audio');
+(1, 'Fuentes de poder'),
+(2, 'Procesadores');
 
 -- --------------------------------------------------------
 
@@ -56,9 +48,19 @@ INSERT INTO `categoria` (`ID`, `Nombre`) VALUES
 CREATE TABLE IF NOT EXISTS `productos` (
   `ID` int(11) NOT NULL,
   `Nombre` varchar(20) NOT NULL,
-  `Categoria_ID` int(11) NOT NULL,
-  `Cant_Existente` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `CategoriaID` int(11) NOT NULL,
+  `CantExistente` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`ID`, `Nombre`, `CategoriaID`, `CantExistente`, `created_at`, `updated_at`) VALUES
+(1, 'asdasd', 1, 2, '2015-07-09 02:21:10', '2015-07-09 02:21:10'),
+(2, 'producto3', 1, 9, '2015-07-09 02:34:04', '2015-07-09 02:34:04');
 
 -- --------------------------------------------------------
 
@@ -103,14 +105,14 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`ID`, `Nombre`, `Apellidos`) VALUES
 (1, 'Alejandro', 'Zazueta'),
-(2, 'Pablo', 'Bracamontes'),
-(3, 'Alain', 'Torrecillas'),
-(4, 'Manuel', 'Verdugo'),
-(5, 'Luis', 'Payan'),
-(6, 'Edi', 'Mata'),
-(7, 'Nachito', 'Ruelas'),
-(8, 'Martha', 'Estela'),
-(9, 'Clemente', 'Gerardo');
+(2, 'Juampi', 'Zazueta'),
+(3, 'Ale', 'Zazueta'),
+(4, 'jandro', 'zueta'),
+(5, 'andro', 'Zazua'),
+(6, 'Alo', 'eta'),
+(7, 'julio', 'Zipo'),
+(8, 'felipe', 'ulio'),
+(9, 'clemente', 'gerardo');
 
 --
 -- Índices para tablas volcadas
@@ -126,7 +128,7 @@ ALTER TABLE `categoria`
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`), ADD KEY `CategoriaID` (`CategoriaID`);
 
 --
 -- Indices de la tabla `salida_producto`
@@ -140,6 +142,15 @@ ALTER TABLE `salida_producto`
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`ID`);
 
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `productos`
+--
+ALTER TABLE `productos`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
