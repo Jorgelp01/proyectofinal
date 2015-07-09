@@ -26,7 +26,7 @@ class indexController extends Controller
     {
         $productos=productosModelo::getProductos($id);
         $categorias=categoriasModelo::allcategorias();
-        return view('productos', compact ('categorias', 'productos'));
+        return view('productocategoria', compact ('categorias', 'productos'));
     }
 
     public function registraProducto(Request $request)
