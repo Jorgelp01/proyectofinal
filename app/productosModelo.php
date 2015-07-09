@@ -16,7 +16,7 @@ class productosModelo extends Model
     public static function getProductos($id_categoria)
     {
     	return self::join('categoria', 'categoria.ID', '=', 'productos.CategoriaID')
-    	->select('productos.ID', 'productos.Nombre', 'productos.CantExistente', 'categoria.Nombre')
+    	->select('productos.ID', 'productos.Nombre', 'productos.CantExistente', 'categoria.Nombre as cn')
     	->where('productos.CategoriaID', '=', $id_categoria)
     	->get();
     }

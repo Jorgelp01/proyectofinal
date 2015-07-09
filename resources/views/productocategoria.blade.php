@@ -11,15 +11,15 @@
                 <td align="left"><strong>Producto: {{$producto->ID}}</strong></td>
             </tr>
             <tr>
-                <td>Nombre del producto:</td>
+                <td>Nombre del producto: </td>
                 <td>{{$producto->Nombre}}</td>
             </tr>
             <tr>
-                <td>Categoria:</td>
-                <td>{{$producto->CategoriaID}}</td>
+                <td>Categoria: </td>
+                <td>{{$producto->cn}}</td>
             </tr>
             <tr>
-                <td>Cantidad existente:</td>
+                <td>Cantidad existente: </td>
                 <td>{{$producto->CantExistente}}</td>
             </tr>
         </table>
