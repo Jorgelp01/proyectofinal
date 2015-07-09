@@ -37,6 +37,8 @@ class indexController extends Controller
         $producto->categoriaID = $request->input("CategoriaID");
         $producto->cantexistente = $request->input("CantExistente");
         $producto->save();
+
+        return view('guardar');
     }
 
     public function categoriaBox()

@@ -53,3 +53,25 @@ h4,h2 {
 }
 
 footer p {text-align: center;}
+
+input[type=submit]{
+    background: rgb(125,205,64);
+    border: #ed1a3b;
+    width: 80px;
+    height: 30px;
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+input[disabled]{
+    background: #ed1a3b;
+    border: #ed1a3b;
+    width: 80px;
+    height: 30px;
+    color:white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+

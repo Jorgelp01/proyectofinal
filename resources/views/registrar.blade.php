@@ -93,7 +93,7 @@
                         </select>
                     </label>
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />              
-                    <input type = "submit" value = "Enviar">
+                    <input type = "submit" value = "Enviar" disabled>
 
                 </form>
                                 
@@ -121,6 +121,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="http://localhost:8000/js/bootstrap.min.js"></script>
+    <script src="http://localhost:8000/js/validar.js"></script>
 
 </body>
 
