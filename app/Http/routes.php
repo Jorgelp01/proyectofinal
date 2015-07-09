@@ -12,8 +12,9 @@
 */
 
 Route::get('/', 'indexController@index');
-Route::get('/categoria/{id}', 'indexController@categoriaProducto');
+//Route::get('/categoria/{id}', 'indexController@categoriaProducto');
 Route::get('registrar','indexController@categoriaBox');
+Route::get('/productocategoria/{id}', 'indexController@categoriaProducto');
 Route::Post('/guardar','indexController@registraProducto');
 
 Route::get('/salida', function()
