@@ -79,7 +79,7 @@
                 @foreach($categorias as $categoria)
             <div class="col-sm-4">
                 <img class="img-circle img-responsive img-center" src="http://localhost:8000/images/categorias/{{$categoria->ID}}.jpg" alt="">
-                <h2><a href="http://localhost:8000/productocategoria/{{$categoria->ID}}">{{$categoria->Nombre}}</h2>
+                <h2><a href="http://localhost:8000/productocategoria/{{$categoria->ID}}">{{$categoria->Nombre}}</a></h2>
             </div>
             @endforeach
     </div>
