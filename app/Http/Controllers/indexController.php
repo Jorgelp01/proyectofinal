@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\categoriasModelo;
 use App\productosModelo;
+use App\usuariosModelo;
 
 class indexController extends Controller
 {
@@ -22,17 +23,18 @@ class indexController extends Controller
         return view ('index', compact ('categorias'));
     }
 
-    public function usuariosNombre($id)
+    public function usuariosNombre()
     {
         $usuarios=usuariosModelo::allusuarios();
-        return view ('index', compact ('usuarios'));
+        return view ('productocategoria', compact ('usuarios'));
     }
 
     public function categoriaProducto($id)
     {
         $productos=productosModelo::getProductos($id);
         $categorias=categoriasModelo::allcategorias();
-        return view('productocategoria', compact ('categorias', 'productos'));
+        $usuarios=usuariosModelo::allusuarios();
+        return view('productocategoria', compact ('categorias', 'productos', 'usuarios'));
     }
 
     public function registraProducto(Request $request)

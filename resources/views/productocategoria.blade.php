@@ -21,7 +21,20 @@
             <tr>
                 <td>Cantidad existente: </td>
                 <td>{{$producto->CantExistente}}</td>
-            </tr>
+          </tr>
+         <tr>
+                <td>Usuario: </td>
+                <td>
+                    <select name='usuarios'>
+                    @foreach($usuarios as $usuario)
+                    <option value='{{$usuario->ID}}'>{{$usuario->Nombre}}</option>
+                    @endforeach
+                    </select>
+                </td>
+
+
+           </tr>
+     <tr>
         </table>
     </div>
     <hr/>
