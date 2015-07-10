@@ -15,6 +15,7 @@ Route::get('/', 'indexController@index');
 Route::get('registrar','indexController@categoriaBox');
 Route::get('/productocategoria/{id}', 'indexController@categoriaProducto');
 Route::Post('/guardar','indexController@registraProducto');
+Route::get('/usuarios/{id}', 'indexController@usuariosNombre');
 
 Route::get('/salida', function()
 {

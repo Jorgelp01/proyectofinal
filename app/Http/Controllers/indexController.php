@@ -22,6 +22,12 @@ class indexController extends Controller
         return view ('index', compact ('categorias'));
     }
 
+    public function usuariosNombre($id)
+    {
+        $usuarios=usuariosModelo::allusuarios();
+        return view ('index', compact ('usuarios'));
+    }
+
     public function categoriaProducto($id)
     {
         $productos=productosModelo::getProductos($id);
