@@ -72,6 +72,13 @@ input[disabled]{
     color:white;
     font-weight: bold;
     border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+td .dato {
+    background: white;
+    color:#105b83;
+    width:100%;
+}
 
