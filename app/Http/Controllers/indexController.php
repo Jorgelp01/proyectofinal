@@ -57,8 +57,16 @@ class indexController extends Controller
 
     public function actualiza(Request $request,$id)
     {
+        $cantdb = \DB::table('productos')->select('CantExistente')->where('ID', $id)->first();
+        $cantinput = $request->input('cantidads');
+        $resul=($cantdb->CantExistente - intval($cantinput));
+       // dd($resul);
+       // dd(intval($cantinput));
+       // dd(intval($cantdb));
+       // $cantinput = $request->input('cantidads');
+       //$resultado = $cantdb - $cantinput;
         
-        \DB::table('productos')->where('ID',$id)->update(['CantExistente'=>$request->input('cantidads')]);
+        \DB::table('productos')->where('ID',$id)->update(['CantExistente'=>$resul]);
         return view('guardar');
     }
 
