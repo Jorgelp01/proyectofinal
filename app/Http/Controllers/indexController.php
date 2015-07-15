@@ -55,4 +55,11 @@ class indexController extends Controller
         return view ('registrar', compact ('categorias'));   
     }
 
+    public function actualiza(Request $request,$id)
+    {
+        
+        \DB::table('productos')->where('ID',$id)->update(['CantExistente'=>$request->input('cantidads')]);
+        return view('guardar');
+    }
+
 }

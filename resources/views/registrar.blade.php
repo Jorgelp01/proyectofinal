@@ -73,32 +73,36 @@
 
         <hr>
 
-        <div class="row">
-            <div class="col-sm-12">
-                <h4>Registrar producto</h4>
-                <form action ="http://localhost:8000/guardar" method = "POST">
-                    
-                    <label>
-                        <input name = "nombre" type = "text" placeholder = "Nombre del producto">
-                    </label>
-                    <label>
-                        <input name = "CantExistente" type = "text" placeholder = "Cantidad existente">
-                    </label>
-                    <label>
-                        <select name="CategoriaID">
-                            @foreach($categorias as $categoria)
-                                <option value="{{$categoria->ID}}">{{$categoria->Nombre}}</option>
+        <div class="box2">
+        <table class="altrowstable" id="alternatecolor" align = "center">
+            <tr>
+                <td align="left"><strong>Producto: {{$producto->ID}}</strong></td>
+            </tr>
+            <tr>
+                <td>Nombre del producto:   </td>
+                <td><input name = "nombrep" type = "text" value = "{{$producto->Nombre}}" placeholder = "{{$producto->Nombre}}" class = "dato" disabled></td>
+            </tr>
 
-                            @endforeach
-                        </select>
-                    </label>
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}" />              
-                    <input type = "submit" value = "Enviar" disabled>
-
-                </form>
-                                
-            </div>
-         </div>
+            <tr>
+                <td>Categoria:   </td>
+                <td><input name = "categoriap" type = "text" value = "{{$producto->cn}}" placeholder = "{{$producto->cn}}" class = "dato" disabled></td>
+            </tr>
+            <tr>
+                <td>Cantidad existente:   </td>
+                <td><input name = "cantidadp" type = "text" value = "{{$producto->CantExistente}}" placeholder = "{{$producto->CantExistente}}" class = "dato" disabled></td>
+          </tr>
+            <tr>
+                <td>Cantidad de salida:   </td>
+                <td><input name = "cantidads" type = "text"  placeholder = "Cantidad de salida" class = "dato"></td>
+          </tr>
+                <tr>
+        <td>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type = "submit" value = "Dar salida">  </td>
+    </tr>
+        </table>
+    </div>
+    <hr/>
         <!-- /.row -->
 
         <hr>

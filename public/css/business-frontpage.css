@@ -62,6 +62,8 @@ input[type=submit]{
     color:white;
     font-weight: bold;
     border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 input[disabled]{
@@ -80,5 +82,12 @@ td .dato {
     background: white;
     color:#105b83;
     width:100%;
+}
+
+.caja2
+{
+    margin-left: auto;
+    margin-right:auto;
+    width:350px;
 }
 

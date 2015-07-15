@@ -20,4 +20,6 @@ class productosModelo extends Model
     	->where('productos.CategoriaID', '=', $id_categoria)
     	->get();
     }
+
+ 
 }
