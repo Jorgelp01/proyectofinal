@@ -27,7 +27,7 @@
           </tr>
             <tr>
                 <td>Cantidad de salida:   </td>
-                <td><input name = "cantidads" type = "int"  placeholder = "Cantidad de salida" class = "dato"></td>
+                <td><input name = "cantidads" type = "text"  placeholder = "Cantidad de salida" class = "dato"></td>
           </tr>
                 <td>Usuario:</td>
                  <td>
