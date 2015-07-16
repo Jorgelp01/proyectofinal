@@ -57,8 +57,10 @@ class indexController extends Controller
         $cantinput = $request->input('cantidads');
         $nombreus=$request->input('usuarios');
         $nombreus2=\DB::table('usuarios')->select('Nombre')->where('ID', $nombreus)->first();
+        $nombrpr=\DB::table('productos')->select('Nombre')->where('ID', $id)->first();
         $salida = new salidasModelo();
         $salida->Producto_ID = $productoid->ID;
+        $salida->Nombre_Producto = $nombrpr->Nombre;
         $salida->Cantidad = intval($cantinput);
         $salida->Usuario_ID = intval( $nombreus);
         $salida->Nombre_salida=$nombreus2->Nombre;
@@ -85,6 +87,20 @@ class indexController extends Controller
         
         \DB::table('productos')->where('ID',$id)->update(['CantExistente'=>$resul]);
         return view('guardar');
+    }
+
+    public function generaPdf($id)
+    {
+        $salida=salidasModelo::getInfoSalida($id);
+        
+         $vista = view('generapdf', compact($salida));
+        $dompdf = \App::make('dompdf.wrapper');
+        $dompdf->loadHTML($vista);
+        return $dompdf->stream();
+
+
+
+
     }
 
 }
