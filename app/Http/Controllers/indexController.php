@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use App\categoriasModelo;
 use App\productosModelo;
 use App\usuariosModelo;
+use App\salidasModelo;
 
 class indexController extends Controller
 {
@@ -49,6 +50,26 @@ class indexController extends Controller
         return view('guardar');
     }
 
+    public function reporteSalida(Request $request ,$id)
+    {
+
+        $productoid= \DB::table('productos')->select('ID')->where('ID', $id)->first();
+        $cantinput = $request->input('cantidads');
+        $nombreus=$request->input('usuarios');
+        $nombreus2=\DB::table('usuarios')->select('Nombre')->where('ID', $nombreus)->first();
+        $salida = new salidasModelo();
+        $salida->Producto_ID = $productoid->ID;
+        $salida->Cantidad = intval($cantinput);
+        $salida->Usuario_ID = intval( $nombreus);
+        $salida->Nombre_salida=$nombreus2->Nombre;
+        $salida->save();
+
+
+
+    //    return view('generapdf');
+    }
+
+
     public function categoriaBox()
     {
      $categorias=categoriasModelo::allcategorias();
@@ -60,11 +81,7 @@ class indexController extends Controller
         $cantdb = \DB::table('productos')->select('CantExistente')->where('ID', $id)->first();
         $cantinput = $request->input('cantidads');
         $resul=($cantdb->CantExistente - intval($cantinput));
-       // dd($resul);
-       // dd(intval($cantinput));
-       // dd(intval($cantdb));
-       // $cantinput = $request->input('cantidads');
-       //$resultado = $cantdb - $cantinput;
+        
         
         \DB::table('productos')->where('ID',$id)->update(['CantExistente'=>$resul]);
         return view('guardar');
