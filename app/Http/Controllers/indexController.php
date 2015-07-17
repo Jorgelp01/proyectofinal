@@ -50,9 +50,23 @@ class indexController extends Controller
         return view('guardar');
     }
 
-    public function reporteSalida(Request $request ,$id)
-    {
 
+
+
+    public function categoriaBox()
+    {
+     $categorias=categoriasModelo::allcategorias();
+        return view ('registrar', compact ('categorias'));   
+    }
+
+   public function actualiza(Request $request,$id)
+    {
+        $cantdb = \DB::table('productos')->select('CantExistente')->where('ID', $id)->first();
+        $cantinput = $request->input('cantidads');
+        $resul=($cantdb->CantExistente - intval($cantinput));
+        
+        \DB::table('productos')->where('ID',$id)->update(['CantExistente'=>$resul]);
+        
         $productoid= \DB::table('productos')->select('ID')->where('ID', $id)->first();
         $cantinput = $request->input('cantidads');
         $nombreus=$request->input('usuarios');
@@ -66,34 +80,28 @@ class indexController extends Controller
         $salida->Nombre_salida=$nombreus2->Nombre;
         $salida->save();
 
+      /*  $salida=salidasModelo::getInfoSalida($id);
+        dd($salida);
+        $vista = view('generapdf', compact($salida));
+        $dompdf = \App::make('dompdf.wrapper');
+        $dompdf->loadHTML($vista);
+        return $dompdf->stream();*/
 
+
+        return view('guardar');
 
     //    return view('generapdf');
-    }
+
+   
 
 
-    public function categoriaBox()
-    {
-     $categorias=categoriasModelo::allcategorias();
-        return view ('registrar', compact ('categorias'));   
-    }
-
-    public function actualiza(Request $request,$id)
-    {
-        $cantdb = \DB::table('productos')->select('CantExistente')->where('ID', $id)->first();
-        $cantinput = $request->input('cantidads');
-        $resul=($cantdb->CantExistente - intval($cantinput));
-        
-        
-        \DB::table('productos')->where('ID',$id)->update(['CantExistente'=>$resul]);
-        return view('guardar');
     }
 
     public function generaPdf($id)
     {
         $salida=salidasModelo::getInfoSalida($id);
         
-         $vista = view('generapdf', compact($salida));
+         $vista = view('generapdf', compact('salida'));
         $dompdf = \App::make('dompdf.wrapper');
         $dompdf->loadHTML($vista);
         return $dompdf->stream();

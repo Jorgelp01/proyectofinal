@@ -15,8 +15,9 @@ class salidasModelo extends Model
     }
     public static function getInfoSalida($id_salida)
     {
-    	return self::select('ID','Producto_ID','Nombre_Producto','Cantidad','Usuario_ID','Nombre_Salida')
-    	->get();
+        return self::select('ID','Producto_ID', 'Nombre_Producto', 'Cantidad','Usuario_ID','Nombre_salida')
+        ->get();
 
     }
+
 }
