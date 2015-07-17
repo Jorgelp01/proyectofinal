@@ -25,6 +25,9 @@
 <tr>
       <td style="text-align: center" colspan="4">NOMBRE DEL USUARIO: {{$salida_producto->Nombre_salida}}</td>
  </tr>    
+ <tr>
+      <td style="text-align: center" colspan="4">FECHA: {{$salida_producto->created_at}}</td>
+ </tr>  
       @endforeach
     
   </table>
