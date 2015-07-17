@@ -16,8 +16,13 @@ Route::get('registrar','indexController@categoriaBox');
 Route::get('/productocategoria/{id}', 'indexController@categoriaProducto');
 Route::Post('/guardar','indexController@registraProducto');
 Route::Post('/guardar/{id}','indexController@actualiza');
+//Route::Post('/guardar/{id}','indexController@reporteSalida');
+Route::get('/generapdf/{id}','indexController@generaPdf');
+
 
 Route::get('/salida', function()
 {
     return view('salida');
 });
+
+

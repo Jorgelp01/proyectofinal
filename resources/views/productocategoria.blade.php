@@ -23,11 +23,11 @@
             </tr>
             <tr>
                 <td>Cantidad existente:   </td>
-                <td><input name = "cantidadp" type = "text" value = "{{$producto->CantExistente}}" placeholder = "{{$producto->CantExistente}}" class = "dato" disabled></td>
+                <td><input name = "cantidadp" type = "text" value = "{{$producto->CantExistente}}" placeholder = "{{$producto->CantExistente}}" class = "dato"disabled></td>
           </tr>
             <tr>
                 <td>Cantidad de salida:   </td>
-                <td><input name = "cantidads" type = "text"  placeholder = "Cantidad de salida" class = "dato"></td>
+                <td><input name = "cantidads" type = "number" placeholder = "Cantidad de salida" class = "dato" required pattern = "[0-9]{1,2}" max = "{{$producto->CantExistente}}" min = "0"></td>
           </tr>
                 <td>Usuario:</td>
                  <td>
@@ -40,20 +40,27 @@
                 <tr>
         <td>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type = "submit" value = "Dar salida">  </td>
+            <input type = "submit" value = "Dar salida">
+            
+        </td>
     </tr>
-         <tr>
-               
-
-
+    <tr>
+          
            </tr>
      <tr>
 
         </table>
+
     </div>
+
     <hr/>
 </form>
 @endforeach
+<table align = "center" >
+    <tr>
+        <td> <h3 align = "center">Reporte de Salidas</h3> </td>
+        <td ><a align = "right" href="http://localhost:8000/generapdf/{{$producto->ID}}"><img  src="http://localhost:8000/images/pdficon.gif"></img></a></td>
+    </tr>
+</table>
 
-               
 @stop

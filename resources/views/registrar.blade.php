@@ -47,9 +47,8 @@
                     <li>
                         <a href="http://localhost:8000/registrar">Registrar producto</a>
                     </li>
-                    <li>
-                        <a href="http://localhost:8000/salida">Salidas</a>
-                    </li>
+
+                   
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -82,7 +81,7 @@
                         <input name = "nombre" type = "text" placeholder = "Nombre del producto">
                     </label>
                     <label>
-                        <input name = "CantExistente" type = "text" placeholder = "Cantidad existente">
+                        <input name = "CantExistente" type = "number" required pattern = "[0-9]{1,2}" placeholder = "Cantidad existente">
                     </label>
                     <label>
                         <select name="CategoriaID">

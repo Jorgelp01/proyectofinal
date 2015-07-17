@@ -83,7 +83,7 @@
                 <label>Fecha</label>
                 <label>Productos</label>
                 <input type = "number" value = "0" min = "0">
-                 <input type = "submit" value = "Dar salida">
+                 <a href = "http://localhost:8000/generapdf/">
               </form>  
                                
             </div>
