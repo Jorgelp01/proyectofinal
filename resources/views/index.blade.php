@@ -47,6 +47,7 @@
                     <li>
                         <a href="http://localhost:8000/registrar">Registrar producto</a>
                     </li>
+                         
                   
                 </ul>
             </div>

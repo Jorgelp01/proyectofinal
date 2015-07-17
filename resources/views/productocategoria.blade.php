@@ -41,7 +41,7 @@
         <td>
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type = "submit" value = "Dar salida">
-             <td align="right"><a href="http://localhost:8000/generapdf/{{$producto->ID}}"><img src="http://localhost:8000/images/pdficon.gif"></img></a></td>
+            
         </td>
     </tr>
     <tr>
@@ -50,9 +50,17 @@
      <tr>
 
         </table>
+
     </div>
+
     <hr/>
 </form>
 @endforeach
+<table align = "center" >
+    <tr>
+        <td> <h3 align = "center">Reporte de Salidas</h3> </td>
+        <td ><a align = "right" href="http://localhost:8000/generapdf/{{$producto->ID}}"><img  src="http://localhost:8000/images/pdficon.gif"></img></a></td>
+    </tr>
+</table>
 
 @stop

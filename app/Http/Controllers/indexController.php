@@ -88,7 +88,7 @@ class indexController extends Controller
         return $dompdf->stream();*/
 
 
-        return view('guardar');
+        return Redirect()->back();
 
     //    return view('generapdf');
 
